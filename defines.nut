@@ -97,8 +97,8 @@ function SpawnHorseman(donorname, teamnum) {
         if (entity.GetModelName() == "models/weapons/c_models/c_bigaxe/c_bigaxe.mdl")
             entity.SetModel("models/weapons/c_models/c_big_mallet/c_big_mallet.mdl")
     }
-    
-    local startpos = PASSTIME_BALL_SPAWN.GetOrigin() + Vector(0, 0 ,-150)
+    //local startpos = PASSTIME_BALL_SPAWN.GetOrigin() + Vector(0, 100,-500) //brickltown
+    local startpos = PASSTIME_BALL_SPAWN.GetOrigin() + Vector(0, 0 ,-150) //district
     hhh.SetOrigin(startpos)
     SendGlobalGameEvent("show_annotation", {
         worldPosX = startpos.x
