@@ -1,6 +1,6 @@
-IncludeScript("twitch/defines.nut")
-//IncludeScript("twitch/gameevents.nut")
-IncludeScript("twitch/rtd.nut")
+IncludeScript("passtime/defines.nut")
+IncludeScript("passtime/gameevents.nut")
+IncludeScript("passtime/rtd.nut")
 
 //rtd and horseman code appeneded from mvm code, thanks to kiwi and mega for their contributions to both 
 function twitchHandler(username, amount, message) {
