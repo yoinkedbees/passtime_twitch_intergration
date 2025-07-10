@@ -3,7 +3,10 @@
 ::TF_GAMERULES <- Entities.FindByClassname(null, "tf_gamerules")
 ::MONSTER_RESOURCE <- Entities.FindByClassname(null, "monster_resource")
 ::WORLDSPAWN <- Entities.FindByClassname(null, "worldspawn") 
-::PASSTIME_BALL_SPAWN <- Entities.FindByClassname(null, "info_passtime_ball_spawn")
+
+
+
+
 
 ::GLOBALTHINKENT <- Entities.CreateByClassname("info_target");
 AddThinkToEnt(GLOBALTHINKENT, "globalThink");
@@ -97,8 +100,9 @@ function SpawnHorseman(donorname, teamnum) {
         if (entity.GetModelName() == "models/weapons/c_models/c_bigaxe/c_bigaxe.mdl")
             entity.SetModel("models/weapons/c_models/c_big_mallet/c_big_mallet.mdl")
     }
-    //local startpos = PASSTIME_BALL_SPAWN.GetOrigin() + Vector(0, 100,-500) //brickltown
-    local startpos = PASSTIME_BALL_SPAWN.GetOrigin() + Vector(0, 0 ,-150) //district
+    ::PASSTIME_BALL_SPAWN <- Entities.FindByClassname(null, "info_passtime_ball_spawn")
+    local startpos = PASSTIME_BALL_SPAWN.GetOrigin() + Vector(0, 0 ,-150)
+    printl(startpos);
     hhh.SetOrigin(startpos)
     SendGlobalGameEvent("show_annotation", {
         worldPosX = startpos.x
@@ -119,3 +123,8 @@ function hhhHealthBarThink() {
         NetProps.SetPropInt(MONSTER_RESOURCE, "m_iBossHealthPercentageByte", healthratio * 255)
     }
 }
+
+function RespawnPasstimeBall(donorname) {
+    DoEntFire("passtime_logic", "SpawnBall", "", 0, null, null)
+}
+
