@@ -1,9 +1,9 @@
 IncludeScript("passtime/defines.nut")
-IncludeScript("passtime/gameevents.nut")
 IncludeScript("passtime/rtd.nut")
-//IncludeScript("passtime/potato.nut")
+IncludeScript("passtime/potato.nut")
 
 //rtd and horseman code appeneded from mvm code, thanks to kiwi and mega for their contributions to both 
+//thanks to kiwi for his work on the potato.nut file 
 function twitchHandler(username, amount, message) {
     ClientPrint(null, 3, "\x07ffffff[\x07ff00ffTwitch Integration\x07ffffff] \x07FF3F3F" + username + " \x01donated: \x03$" + amount/100 + " \x01with message: " + message)
     switch (amount) {
@@ -17,7 +17,7 @@ function twitchHandler(username, amount, message) {
             break;
         case 2000:
             ClientPrint(null, 3, "\x07FF3F3F" + username + "\x01 donated \x03$" + amount/100 + "\x01, HOT POTATO!!!")
-            StartHotPotatoMode()
+            StartFuckingHotPotatoMode()
             printl("case for 20 dollars")
             break;
       case 2000:
