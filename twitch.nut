@@ -20,7 +20,7 @@ function twitchHandler(username, amount, message) {
             StartFuckingHotPotatoMode()
             printl("case for 20 dollars")
             break;
-      case 2000:
+      case 2500:
             Convars.SetValue("sv_gravity", RandomInt(0, 500))
             ClientPrint(null, 3, "\x07FF3F3F" + username + "\x01 donated \x03$" + amount/100 + "\x01, randomising gravity!")
             printl("case for 20 dollars")
