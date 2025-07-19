@@ -1,3 +1,4 @@
+//all kiwis code 
 ::fl_PotatoFuckingTime <- 0
     
 function StartFuckingHotPotatoMode() {
@@ -16,7 +17,7 @@ function StopFuckingHotPotatoMode() {
     printl("[Hot Potato] Mode ended.");
 }
 
-function IHateFuckingEverything() {
+function IHateFuckingEverything() { 
     if (Time() <= fl_PotatoFuckingTime) // hot potato mode is active
     {
         local trigger = SpawnEntityFromTable("trigger_ignite",{
